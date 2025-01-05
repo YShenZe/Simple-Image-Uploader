@@ -108,7 +108,7 @@ $currentImages = array_slice($uploads, $start, $imagesPerPage);
             foreach ($currentImages as $file) {
                 $filePath = 'uploads/' . $file;
                 $fileName = pathinfo($file, PATHINFO_FILENAME);
-                $fileUrl = 'https://' . $_SERVER['HTTP_HOST'] . '/img/' . $filePath;
+                $fileUrl = 'https://' . $_SERVER['HTTP_HOST'] . $filePath;
                 echo "
                     <div class='bg-white shadow-lg rounded-lg overflow-hidden transform image-card mb-4'>
                         <div class='relative'>
