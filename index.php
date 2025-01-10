@@ -5,8 +5,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['file'])) {
     $fileExtension = pathinfo($originalFileName, PATHINFO_EXTENSION);
     $newFileName = date("Y-m-d") . '_' . substr(md5(rand()), 0, 5) . '.' . $fileExtension;
     $targetFile = $targetDir . $newFileName;
-
-    // 移动文件到目标目录
     if (move_uploaded_file($_FILES["file"]["tmp_name"], $targetFile)) {
         $uploadSuccess = true;
     } else {
