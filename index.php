@@ -3,8 +3,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['file'])) {
     $targetDir = "uploads/";
     $originalFileName = $_FILES["file"]["name"];
     $fileExtension = pathinfo($originalFileName, PATHINFO_EXTENSION);
-
-    // 生成新的文件名：年月日_随机五位字母.后缀
     $newFileName = date("Y-m-d") . '_' . substr(md5(rand()), 0, 5) . '.' . $fileExtension;
     $targetFile = $targetDir . $newFileName;
 
