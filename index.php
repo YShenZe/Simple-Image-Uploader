@@ -1,5 +1,4 @@
 <?php
-// 文件上传处理
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['file'])) {
     $targetDir = "uploads/";
 
