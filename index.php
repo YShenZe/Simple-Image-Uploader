@@ -1,8 +1,6 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['file'])) {
     $targetDir = "uploads/";
-
-    // 获取文件信息
     $originalFileName = $_FILES["file"]["name"];
     $fileExtension = pathinfo($originalFileName, PATHINFO_EXTENSION);
 
